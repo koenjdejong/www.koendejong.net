@@ -1,3 +1,10 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-uk'
-title = 'My New Hugo Site'
+baseURL = 'https://www.koendejong.net/'
+languageCode = 'en'
+title = 'Home | Koen de Jong'
+
+assetDir = "static"
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+relativeURLs = true
+enableEmoji = true
+
