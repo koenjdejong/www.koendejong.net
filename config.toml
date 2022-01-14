@@ -8,3 +8,5 @@ defaultContentLanguage = "en"
 relativeURLs = true
 enableEmoji = true
 
+[params]
+	metaDescription = "This is the personal website of Koen de Jong. I am a computer science student at the University of Twente passionate about new technologies and sustainability"
