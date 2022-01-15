@@ -6,9 +6,11 @@ ___
 ## Description
 This repository contains my personal website, currently live [here](https://www.koendejong.net/).
 
-### Installation
-This project was made using [hugo](https://gohugo.io/). 
-
+### Libraries & Frameworks
+For this project I used the following libraries and frameworks:
+- [Hugo](https://gohugo.io/), for the static site generator and overall framework
+- [Font Awesome](https://fontawesome.com/), for icons
 
 ### Todos
 - [ ] Convert profile pic to smaller image size
+- [ ] Replace moon & sun icons with font awesome
