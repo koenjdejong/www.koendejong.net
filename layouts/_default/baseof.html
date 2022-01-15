@@ -34,7 +34,7 @@
     {{ end }}
     
     <footer>
-      <p>Questions, thoughts? <em>I'd love to hear from you!</em> Get in touch with me at <a href="mailto:mail@koendejong.net">mail@koendejong.net.</a></p>
+      <p>Questions, thoughts? <em>I'd love to hear from you!</em> Get in touch with me at <a href="mailto:mail@koendejong.net">mail@koendejong.net</a>.</p>
       <nav>
         <ul class="reset">
           <li>&copy; <span id="year">2022</span> - Koen de Jong</li>
@@ -45,6 +45,8 @@
       </nav>
     </footer>
 
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="/js/script.js"></script>
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
         
@@ -63,5 +65,7 @@
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
       });
     </script>
+
+
   </body>
 </html>
