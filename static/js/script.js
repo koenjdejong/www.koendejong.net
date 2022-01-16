@@ -6,12 +6,12 @@ var typewriter = new Typewriter(app, {
     delay: 70  
 });
 
-typewriter.typeString('Developer')
+typewriter.typeString('Student')
     .pauseFor(2000)
     .deleteAll()
-    .typeString('Student')
+    .typeString('Software engineer')
     .pauseFor(2000)
     .deleteAll()
-    .typeString('Entrepreneur')
+    .typeString('Developer')
     .pauseFor(2000)
     .start();
