@@ -1,5 +1,4 @@
 {{ define "main" }}
-
 <div class="intro">
     <img src="/img/profile-picture.jpg" alt="Photo of Koen de Jong" />
     <div>
@@ -8,15 +7,30 @@
             <li>
                 <a href="https://github.com/koenjdejong/" title="GitHub"><i class="fab fa-github"></i></a></li>
             <li>
-                <a href="https://www.linkedin.com/in/koendejong-/" title="LinkedIn"><i class="fas fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/koendejong-/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></i></a>
             </li>
         </ul>
         <p>I'm currently studying computer science at the University of Twente.</p>
-        <p>I am passionate about new technologies and sustainability.</p>
+        <p>I am passionate about the sustainability and the newest technologies.</p>
         <p>On this website I will <em>occasionally</em> post about stuff that interests me and keep up to date on information about me.</p>
-        <p>I am a: <div id="typewriter"></div></p>
+    </div>
+</div>
+{{ end }}
+
+{{ define "typewriter" }}
+<hr>
+<div>
+    <div class="center-container">
+        <p>I am a: <div class="stylewriter" id="typewriter"></div></p>
         <p><a href="/about/">More about me</a> / <a href="/now/">What I'm doing now</a></p>
     </div>
 </div>
-
+<style>
+    .stylewriter {
+        font-size: 2rem;
+    }
+    .center-container {
+        text-align: center;
+    }
+</style>
 {{ end }}

@@ -1,4 +1,4 @@
-baseURL = 'https://www.koendejong.net/'
+baseURL = 'https://www.koendejong.net'
 languageCode = 'en'
 title = 'Home | Koen de Jong'
 
@@ -10,3 +10,8 @@ enableEmoji = true
 
 [params]
 	metaDescription = "This is the personal website of Koen de Jong. I am a computer science student at the University of Twente passionate about new technologies and sustainability"
+
+[permalinks]
+	pages = "/:slug/"
+	posts = "/:slug/"
+	categories = "/:slug/"
