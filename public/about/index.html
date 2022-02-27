@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    {{ hugo.Generator }}
+    <meta name="generator" content="Hugo 0.92.0" />
 
-    <title>{{ if not .IsHome }}{{ .Title }} / {{ end }}{{ .Site.Title }}</title>
-    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.metaDescription }}{{ else }}{{ .Page.Summary }}{{ end }}" />
+    <title>About me / Home | Koen de Jong</title>
+    <meta name="description" content="I was born in a small city in the South-East of the Netherlands called Venray. After high school, I moved to Enschede to pursue my interests at a higher education level. I am currently studying the bachelor Computer Science at the University of Twente.
+To be continued&hellip;" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#161619">
-    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+    <link rel="manifest" href="../img/site.webmanifest">
+    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#161619">
+    <link rel="shortcut icon" href="../img/favicon.ico">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
   <body>
     <main>
-      {{ block "main" . }}{{ end }}
+      
+<article class="article">
+  <h1>About me</h1>
+  <span class="article-details">Who am I?</span>
+  <p>I was born in a small city in the South-East of the Netherlands called Venray. After high school, I moved to Enschede to pursue my interests at a higher education level. I am currently studying the bachelor Computer Science at the University of Twente.</p>
+<p><em>To be continued&hellip;</em></p>
+
+</article>
+
+
     </main>
 
     <div>
-      {{ block "typewriter" . }}{{ end }}
+      
     </div>
 
-    {{ if .IsHome }}
-      <hr>
-    {{ else }}
-      <nav class="hr"><a href="/">Home</a></nav>
-    {{ end }}
+    
+      <nav class="hr"><a href="../">Home</a></nav>
+    
     
     <footer>
       <p>Questions, thoughts? <em>I'd love to hear from you!</em> <br>
-        <a href="/contact/">Get in touch with me!</a></p>
+        <a href="../contact/">Get in touch with me!</a></p>
       <nav>
         <ul class="reset">
           <li>&copy; <span id="year">2022</span> - Koen de Jong</li>
@@ -49,7 +57,7 @@
     </footer>
 
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="../js/script.js"></script>
     <script>
       document.getElementById('year').innerHTML = new Date().getFullYear();
         

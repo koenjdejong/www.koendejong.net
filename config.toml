@@ -12,6 +12,5 @@ enableEmoji = true
 	metaDescription = "This is the personal website of Koen de Jong. I am a computer science student at the University of Twente passionate about new technologies and sustainability"
 
 [permalinks]
-	pages = "/:slug/"
-	posts = "/:slug/"
-	categories = "/:slug/"
+    contact = "/contact/"	
+    pages = "/:slug/"
