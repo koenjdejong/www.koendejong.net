@@ -13,4 +13,4 @@ For this project I used the following libraries and frameworks:
 
 ### Todos
 - [ ] Convert profile pic to smaller image size
-- [ ] Replace moon & sun icons with font awesome
+- [ ] Fix contact form
