@@ -18,7 +18,7 @@
     <label for="message">Message:</label>
     ​<textarea id="message" class="textarea field"></textarea>
   </div>
-  <button class="submit" type="submit">Send</button>
+  <button id="submit-form" class="submit" type="submit">Send</button>
   <div id="response"></div>
 </form>
 
@@ -26,20 +26,21 @@
   function submitContactFrom() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4) {
-       if (this.status == 200) {
-        let response = JSON.parse(this.responseText)
+      if (this.readyState === 4) {
+         let response = JSON.parse(this.responseText)
+          if (this.status === 200) {
         if (response.success) {
           document.getElementById("response").innerHTML = "Message sent successfully!";
+          document.getElementById("submit-form").disabled = true;
         } else {
           document.getElementById("response").innerHTML = response.message;
         }
       } else {
-        document.getElementById("response").innerHTML = "Something went wrong, please try again later.";
+        document.getElementById("response").innerHTML = `Something went wrong, please try again later.`;
       }
       }
     };
-    xhttp.open("POST", "https://forms.koendejong.net/forms/form_contact_koendejong.net/submit", true);
+    xhttp.open("POST", "https://forms.koendejong.net/form/submit/", true);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8"); 
     xhttp.send(JSON.stringify({
       name: document.getElementById("name").value,
