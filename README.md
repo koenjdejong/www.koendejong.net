@@ -7,10 +7,11 @@ ___
 This repository contains my personal website, currently live [here](https://www.koendejong.net/).
 
 ### Libraries & Frameworks
-For this project I used the following libraries and frameworks:
+This project uses the following frameworks and libraries:
 - [Hugo](https://gohugo.io/), for the static site generator and overall framework
 - [Font Awesome](https://fontawesome.com/), for icons
+- TypeWriter.js, for the typing effect on the homepage
 
 ### Todos
 - [ ] Convert profile pic to smaller image size
-- [ ] Fix contact form
+- [ ] Add Favicons

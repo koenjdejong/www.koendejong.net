@@ -1,0 +1,19 @@
+baseURL = 'https://www.koendejong.net'
+title = 'Koen de Jong'
+
+languageCode = 'en'
+defaultContentLanguage = "en"
+
+enableEmoji = true
+enableRobotsTXT = true
+
+[params]
+metaDescription = "This is the personal website of Koen de Jong. I am a computer science student at the University of Twente passionate about new technologies and sustainability"
+
+[permalinks]
+pages = "/:slug/"
+posts = "/posts/:slug/"
+
+[taxonomies]
+tag = "tags"
+category = "categories"

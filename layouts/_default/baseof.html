@@ -5,70 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {{ hugo.Generator }}
 
-    <title>{{ if not .IsHome }}{{ .Title }} / {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if not .IsHome }}{{ .Title }} / {{ else}} Home / {{ end }}{{ .Site.Title }}</title>
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.metaDescription }}{{ else }}{{ .Page.Summary }}{{ end }}" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/img/site.webmanifest">
-    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#161619">
     <link rel="shortcut icon" href="/img/favicon.ico">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
-
 </head>
   <body>
     <main>
       {{ block "main" . }}{{ end }}
     </main>
 
-    <div>
-      {{ block "typewriter" . }}{{ end }}
-    </div>
-
     {{ if .IsHome }}
       <hr>
     {{ else }}
       <nav class="hr"><a href="/">Home</a></nav>
     {{ end }}
-    
+
     <footer>
       <p>Questions, thoughts? <em>I'd love to hear from you!</em> <br>
         <a href="/contact/">Get in touch with me!</a></p>
       <nav>
         <ul class="reset">
-          <li>&copy; <span id="year">2022</span> - Koen de Jong</li>
+          <li>&copy; <span id="year">2025</span> - Koen de Jong</li>
           <li><a href="https://github.com/koenjdejong/"><i class="fab fa-github"></i></a></li>
-          <li class="cut-off-shadow-hack"><input type="checkbox" id="theme-switch" class="theme-switch"><label for="theme-switch" class="switch-label"></label></li>
+          <li class="cut-off-shadow-hack"><input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="switch-label"></label>
+          </li>
         </ul>
       </nav>
     </footer>
 
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="/js/script.js"></script>
-    <script>
-      document.getElementById('year').innerHTML = new Date().getFullYear();
-        
-      const themeSwitch = document.querySelector('.theme-switch');
-
-      if (localStorage.getItem('theme')) {
-        themeSwitch.checked = localStorage.getItem('theme') === 'dark';
-        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
-      } else if (matchMedia('(prefers-color-scheme: dark)').matches){
-        themeSwitch.checked = true;
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-      
-      themeSwitch.addEventListener('change', function(e) {
-        localStorage.setItem('theme', e.currentTarget.checked ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
-      });
-    </script>
-
-
   </body>
 </html>

@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<a href="/posts/">
+    <i class="fas fa-arrow-left"></i>
+    <span>What I have been up to</span>
+</a>
+
+<article class="article">
+  <h1>{{ .Title }}</h1>
+  <i style=" margin-top: 0.25rem; font-size: 1.15rem">
+    {{ .Params.date.Format "January 2006" }}
+  </i>
+  <span class="article-details">
+    {{ .Params.subtitle }}
+  </span>
+
+  {{ partial "image" .Params.images.header }}
+
+  <p>{{ .Content }}</p>
+
+  {{ partial "image" .Params.images.content }}
+  {{ partial "image" .Params.images.footer }}
+</article>
+
+{{ end }}
+

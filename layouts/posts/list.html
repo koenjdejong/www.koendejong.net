@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+{{ partial "home-arrow" . }}
+
+{{ partial "article" . }}
+
+{{ range .Pages }}
+  <article>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <i style="font-size: 1rem">{{ .Params.date.Format "January 2006" }}</i>
+    <span style="color: #d1d1d1" class="article-details">{{ .Params.subtitle }}</span>
+  </article>
+{{ end }}
+
+{{ end }}

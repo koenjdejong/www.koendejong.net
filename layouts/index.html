@@ -1,36 +1,49 @@
 {{ define "main" }}
+<div style="text-align: center">
+    <h1>{{ .Title }}</h1>
+    <span style="font-size: 1.5rem" class="article-details">{{ .Params.subtitle }}</span>
+</div>
 <div class="intro">
-    <img src="/img/profile-picture-2.jpg" alt="Photo of Koen de Jong" />
     <div>
-        <h1>Koen de Jong</h1>
-        <ul class="reset social-links">
-            <li>
-                <a href="https://github.com/koenjdejong/" title="GitHub"><i class="fab fa-github"></i></a></li>
-            <li>
-                <a href="https://www.linkedin.com/in/koendejong-/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></i></a>
-            </li>
+        <img src="/img/profile-picture.jpg" alt="Photo of Koen de Jong"/>
+        <ul style="display: flex" class="reset social-links">
+            <li><a href="https://github.com/koenjdejong/" title="GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/koenjdejong/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="mailto:contact@koendejong.net" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
         </ul>
-        <p>I'm currently studying computer science at the University of Twente.</p>
-        <p>I am passionate about the sustainability and the newest technologies.</p>
-        <p>On this website I will <em>occasionally</em> post about stuff that interests me and keep up to date on information about me.</p>
+    </div>
+    <div>
+        <p>{{ .Content }}</p>
     </div>
 </div>
-{{ end }}
 
-{{ define "typewriter" }}
 <hr>
 <div>
-    <div class="center-container">
-        <p>I am a: <div class="stylewriter" id="typewriter"></div></p>
-        <p><a href="/about/">More about me</a> / <a href="/now/">What I'm doing now</a></p>
+    <div style="text-align: center">
+        <p>I am a:
+        <div style="font-size: 2rem" id="typewriter"></div>
+        </p>
+        <p><a href="/about/">More about me</a> / <a href="/posts/">What I have been up to</a></p>
     </div>
 </div>
-<style>
-    .stylewriter {
-        font-size: 2rem;
-    }
-    .center-container {
-        text-align: center;
-    }
-</style>
+
+<hr>
+<div>
+    <div style="text-align: center">
+        <p style="font-size: 2rem">Featured posts:</p>
+        <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem">
+            <!-- List first 5 posts -->
+            {{ range first 5 (where .Site.Pages "Section" "posts") }}
+                {{ if eq .Params.featured true }}
+                <div style="display: flex; flex-direction: column; gap: 0.1rem">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <span style="font-family: 'Roboto Mono', Consolas, monospace; font-size: var(--text-1); color: var(--color-text-secondary); margin: 0">
+                        {{ .Params.subtitle }}
+                    </span>
+                </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>
 {{ end }}
