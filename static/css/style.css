@@ -332,12 +332,12 @@ p code {
 
 footer {
   font-family: 'Roboto Mono', Consolas, monospace;
-  color: var(--color-text-secondary);
   text-align: center;
   font-size: var(--text-1);
 }
 
 footer nav {
+  color: var(--color-text-secondary);
   margin-top: var(--space-2);
 }
 
