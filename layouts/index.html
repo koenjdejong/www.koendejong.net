@@ -37,12 +37,16 @@
                 {{ if eq .Params.featured true }}
                 <div style="display: flex; flex-direction: column; gap: 0.1rem">
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <i style="font-size: 0.875rem;">{{ .Params.date.Format "January 2006" }}</i>
                     <span style="font-family: 'Roboto Mono', Consolas, monospace; font-size: var(--text-1); color: var(--color-text-secondary); margin: 0">
                         {{ .Params.subtitle }}
                     </span>
                 </div>
                 {{ end }}
             {{ end }}
+        </div>
+        <div style="margin-top: 3rem">
+            <a href="/posts/" style="font-size: 1rem; font-style: italic;">Show all posts -></a>
         </div>
     </div>
 </div>
