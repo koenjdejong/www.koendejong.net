@@ -20,7 +20,7 @@ images:
     caption: "Final dinner together at Hilton Osaka"
 ---
 
-Together with a group of thirty students and two professors, I started my journey to Australia and Japan with [Study Tour Ascend](https://studytourascend.com/).
+Together with a group of thirty students and two professors, I started my journey to Australia and Japan with Study Tour Ascend, organized by Study Association [Inter-Actief](https://www.inter-actief.net/) from the University of Twente.
 It is organized by fellow students with the support of the university to learn about the cultural differences and work ethics in the Computer Science field. 
 The theme of the trip was "Interconnected Technologies" and we focused on the latest work they were doing in internet technology, data centres, cloud computing and their cybersecurity aspects.
 
